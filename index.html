@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Landing Page</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(120deg, #4e8cff, #6c63ff);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* INFO SECTION */
+.info {
+    padding: 60px 20px;
+    text-align: center;
+    background: white;
+}
+
+.info h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 10px 22px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2 class="logo">MyBrand</h2>
+        <button class="btn" id="learnBtn">Learn More</button>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Your simple landing page built with HTML, CSS & JavaScript.</p>
+        <button class="btn" id="ctaBtn">Get Started</button>
+    </section>
+
+    <section class="info" id="infoSection">
+        <h2>About Us</h2>
+        <p>
+            This is a smooth-scroll example. When you click "Learn More", the page
+            scrolls down to this about section.
+        </p>
+    </section>
+
+    <script>
+      // Smooth scroll to about section
+document.getElementById("learnBtn").onclick = function () {
+    document.getElementById("infoSection").scrollIntoView({
+        behavior: "smooth"
+    });
+};
+
+// Button alert
+document.getElementById("ctaBtn").onclick = function () {
+    alert("Welcome! Let's get started 🎉");
+};
+
+    </script>
+</body>
+</html>
